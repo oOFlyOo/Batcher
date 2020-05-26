@@ -18,6 +18,9 @@ public class UnlitProps : MonoBehaviour
     }
 
     private static MaterialPropertyBlock _matblock;
+    /// <summary>
+    /// 共用一个，减少New
+    /// </summary>
     private static MaterialPropertyBlock MatBlock
     {
         get
@@ -41,7 +44,9 @@ public class UnlitProps : MonoBehaviour
         {
             _mat = gameObject.GetComponent<MeshRenderer>();
         }
-        _mat.GetPropertyBlock(MatBlock);
+        // _mat.GetPropertyBlock(MatBlock);
+        // 如果需要可以进行Clear的操作
+        // MatBlock.Clear();
         MatBlock.SetColor(ColorPropertyID, _color);
         _mat.SetPropertyBlock(MatBlock);
     }

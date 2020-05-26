@@ -3,6 +3,7 @@
 	Properties
 	{
 		_Color ("Main Color", Color) = (1, 1, 1, 1)
+		// 可以标明属性为MaterialPropertyBlock使用，则不会在材质面板显示
 		// [PerRendererData]_Color ("Main Color", Color) = (1, 1, 1, 1)
 	}
 	SubShader
